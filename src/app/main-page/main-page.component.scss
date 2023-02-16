@@ -1,0 +1,50 @@
+#header {
+    background-color: rgb(56, 56, 56);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial;
+    border-radius: 10px;
+}
+
+#projects-container {
+    margin-top: 30px;
+    margin-left: 40px;
+    background-color: gray;
+    padding: 15px;
+    padding-top: 1px;
+    border-radius: 10px;
+    width: 30%;
+    //shadow
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 1);
+}
+
+#projects-container > h4 {
+    font-size: 30px;
+    font-family: monospace;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+#project-list {
+    display: flex;
+    flex-direction: column;
+    //first row gap (between lines) then column (between items in line)
+    gap: 30px;
+    list-style-type: none;
+    padding-left: 0;
+    align-items: stretch;
+}
+
+.code {
+    background-color: black;
+    max-width: 600px;
+    color: white;
+    text-align: left;
+    font-size: 15px;
+    font-family: monospace;
+    padding: 10px;
+    padding-left: 30px;
+    border-radius: 10px;
+}
