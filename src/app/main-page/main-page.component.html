@@ -1,10 +1,13 @@
-<h1 id="header" >Welcome to my Journey</h1>
+<div id="main-page">
+    <h1 id="header" >Welcome to my Journey</h1>
 
-<div id="projects-container">
-    <ul id="project-list">
-        <app-area-of-interest-list-item
-            *ngFor="let val of areasOfInterest" 
-            [areaOfInterest] = "val">
-        </app-area-of-interest-list-item>
-    </ul>
+    <div id="projects-container">
+        <h4>My Areas of Interest</h4>
+        <ul id="project-list">
+            <app-area-of-interest-list-item
+                *ngFor="let val of areasOfInterest" 
+                [areaOfInterest] = "val">
+            </app-area-of-interest-list-item>
+        </ul>
+    </div>
 </div>

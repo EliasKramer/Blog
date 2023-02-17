@@ -1,0 +1,27 @@
+@keyframes backgroundElementsAnimation {
+    0% {
+        transform: translateY(100%);
+        opacity: .5;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(0%);
+    }
+}
+
+h1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    color: green;
+    opacity: 0;
+    font-family: monospace;
+    animation-name: backgroundElementsAnimation;
+    animation-iteration-count: infinite;
+    //move to the back
+    z-index: -1;
+}

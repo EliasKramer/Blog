@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { AreaOfInterestListItemComponent } from './area-of-interest-list-item/area-of-interest-list-item.component';
 import { AreaOfInterestPageComponent } from './area-of-interest-page/area-of-interest-page.component';
+import { BackgroundElementComponent } from './background-element/background-element.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     AreaOfInterestListItemComponent,
-    AreaOfInterestPageComponent
+    AreaOfInterestPageComponent,
+    BackgroundElementComponent
   ],
   imports: [
     BrowserModule,
