@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AreasOfInterestService } from '../areas-of-interest/areas-of-interest.service';
 import { AreaOfInterest } from '../areas-of-interest/area-of-interest';
 
@@ -7,11 +7,48 @@ import { AreaOfInterest } from '../areas-of-interest/area-of-interest';
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss']
 })
-export class MainPageComponent {
+export class MainPageComponent implements OnInit {
   areasOfInterest: AreaOfInterest[];
-  constructor(
-    public givenAreasOfInterest: AreasOfInterestService) 
-    { 
-      this.areasOfInterest = givenAreasOfInterest.getAreasOfInterest();
+  lastHovered: number = -1;
+  terminalStrings: string[] = [];
+  numberOfTerminalStrings: number = 5;
+  next = 0;
+  terminalInput: string = "";
+
+
+  ngOnInit() {
+    //new terminal array size of 5 with items initialized to 0
+    this.terminalStrings = new Array(this.numberOfTerminalStrings).fill("");
+  }
+
+  constructor(public givenAreasOfInterest: AreasOfInterestService) 
+  { 
+    this.areasOfInterest = givenAreasOfInterest.getAreasOfInterest();
+  }
+
+
+  onMouseEntereAOI(idx: number){
+    if(this.lastHovered != idx)
+    {
+      this.terminalStrings[this.next] = ("> " + this.areasOfInterest[idx].description);
+      this.manageNewTerminalLine();
+      this.lastHovered = this.next - 1;
     }
+  }
+
+  onEnterTerminalInput(){
+    this.terminalStrings[this.next] = ("> " + this.terminalInput);
+    this.manageNewTerminalLine();
+    this.terminalInput = "";
+  }
+
+  manageNewTerminalLine()
+  {
+    this.next++;
+    if(this.next >= this.numberOfTerminalStrings)
+    {
+      this.next = this.numberOfTerminalStrings - 1;
+      this.terminalStrings.shift();
+    }
+  }
 }

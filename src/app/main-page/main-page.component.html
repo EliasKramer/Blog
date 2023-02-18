@@ -1,13 +1,44 @@
 <div id="main-page">
     <h1 id="header" >Welcome to my Journey</h1>
+    <div id="main-grid">
+        <div id="projects-container">
+            <h4>My Areas of Interest</h4>
+            <ul id="project-list">
+                <app-area-of-interest-list-item
+                    *ngFor="let val of areasOfInterest; index as i" 
+                    [areaOfInterest] = "val"
+                    (mouseenter) = "onMouseEntereAOI(i)"
+                    >
+                </app-area-of-interest-list-item>
+            </ul>
+        </div>
+        <div id = "terminal-side">
+            <div class="terminal">
+                <div
+                *ngFor="let val of areasOfInterest; index as i">
+                    <p>{{terminalStrings[i]}}</p>
+                </div>
+                <div id="terminal-input-div">
+                    <p id>></p>
+                    <input type="text" 
+                    id="terminal-input" 
+                    (keyup.enter)="onEnterTerminalInput()" 
+                    [(ngModel)]="terminalInput"> 
+                    <p id="terminal-input-display">{{terminalInput}}</p>
+                    <p id="terminal-cursor">_</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <div id="projects-container">
-        <h4>My Areas of Interest</h4>
-        <ul id="project-list">
-            <app-area-of-interest-list-item
-                *ngFor="let val of areasOfInterest" 
-                [areaOfInterest] = "val">
-            </app-area-of-interest-list-item>
-        </ul>
+    <div id="social-media-line">
+        <a href="https://github.com/EliasKramer">
+            <img src="/assets/images/github_icon.png" 
+            alt="Elias Kramer Github Page">
+        </a>
+        <a href="https://discord.com/">
+            <img src="/assets/images/discord_icon.png" 
+            alt="Elias Kramer Discord Account">
+        </a>
     </div>
 </div>
