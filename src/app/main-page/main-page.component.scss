@@ -49,45 +49,6 @@
     border-radius: 10px;
 }
 
-#terminal-input {
-    width: 0%;
-    border: none;
-    outline: none;
-    background-color: black;
-    user-select: none;
-
-}
-#terminal-input-display {
-    color: white;
-    font-family: monospace;
-    font-size: 15px;
-}
-#terminal-cursor
-{
-    color: white;
-    font-family: monospace;
-    font-size: 15px;
-    animation-name: blink;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    //bottom
-    align-self: flex-end;
-}
-
-@keyframes blink {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-#terminal-input-div {
-    display: flex;
-    flex-direction: row;
-}
-#terminal-input-div > p {
-    margin-right: 5px;
-}
-
 #main-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

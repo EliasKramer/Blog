@@ -1,1 +1,18 @@
-<p>terminal works!</p>
+<div class="terminal">
+    <div
+    *ngFor="let val of terminalStrings; index as i">
+        <p>{{terminalStrings[i]}}</p>
+    </div>
+    <div id="terminal-input-div">
+        <p id>></p>
+        
+        <input type="text"
+        #terminalInputElement
+        id="terminal-input" 
+        (keyup.enter)="onEnterTerminalInput()" 
+        [(ngModel)]="terminalInput">
+
+        <p (click)="onTerminalClickInput()" id="terminal-input-display">{{terminalInput}}</p>
+        <p (click)="onTerminalClickInput()" id="terminal-cursor">_</p>
+    </div>
+</div>
