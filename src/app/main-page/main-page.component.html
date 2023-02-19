@@ -20,12 +20,13 @@
                 </div>
                 <div id="terminal-input-div">
                     <p id>></p>
-                    <input type="text" 
+                    <input type="text"
+                    #terminalInputElement
                     id="terminal-input" 
                     (keyup.enter)="onEnterTerminalInput()" 
                     [(ngModel)]="terminalInput"> 
-                    <p id="terminal-input-display">{{terminalInput}}</p>
-                    <p id="terminal-cursor">_</p>
+                    <p (click)="onTerminalClickInput()" id="terminal-input-display">{{terminalInput}}</p>
+                    <p (click)="onTerminalClickInput()" id="terminal-cursor">_</p>
                 </div>
             </div>
         </div>
