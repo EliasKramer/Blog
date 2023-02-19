@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainPageComponent } from './main-page/main-page.component';
-import { AreaOfInterestListItemComponent } from './area-of-interest-list-item/area-of-interest-list-item.component';
-import { AreaOfInterestPageComponent } from './area-of-interest-page/area-of-interest-page.component';
-import { BackgroundElementComponent } from './background-element/background-element.component';
+import { MainPageComponent } from './main/main-page/main-page.component';
+import { AreaOfInterestListItemComponent } from './main/area-of-interest-list-item/area-of-interest-list-item.component';
+import { AreaOfInterestPageComponent } from './main/area-of-interest-page/area-of-interest-page.component';
+import { BackgroundElementComponent } from './main/background-element/background-element.component';
 import { FormsModule } from '@angular/forms';
-import { TerminalComponent } from './terminal/terminal.component';
+import { TerminalComponent } from './main/terminal/terminal.component';
 
 @NgModule({
   declarations: [

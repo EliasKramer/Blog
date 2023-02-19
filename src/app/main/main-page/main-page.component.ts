@@ -18,6 +18,9 @@ export class MainPageComponent {
   }
 
   onMouseEntereAOI(idx: number){
-    this.terminalElement.enterOutsideInput("get " + this.areasOfInterest[idx].title);
+    this.terminalElement.enterOutsideInput(
+      "get " + 
+      this.areasOfInterest[idx].title.replace(" ", "") + 
+      " description");
   }
 }
