@@ -5,6 +5,8 @@ import { Component, Input } from '@angular/core';
   templateUrl: './background-element.component.html',
   styleUrls: ['./background-element.component.scss']
 })
+
+//could be replaced with particle js 
 export class BackgroundElementComponent {
   value: string = Math.random() < 0.5 ? '0' : '1';
   xPos: number = randomNumber(0, window.innerWidth);

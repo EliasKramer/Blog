@@ -8,6 +8,7 @@ import { AreaOfInterestListItemComponent } from './area-of-interest-list-item/ar
 import { AreaOfInterestPageComponent } from './area-of-interest-page/area-of-interest-page.component';
 import { BackgroundElementComponent } from './background-element/background-element.component';
 import { FormsModule } from '@angular/forms';
+import { TerminalComponent } from './terminal/terminal.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     AreaOfInterestListItemComponent,
     AreaOfInterestPageComponent,
     BackgroundElementComponent,
+    TerminalComponent,
   ],
   imports: [
     BrowserModule,

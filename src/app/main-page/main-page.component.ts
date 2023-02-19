@@ -9,9 +9,9 @@ import { AreaOfInterest } from '../areas-of-interest/area-of-interest';
 })
 export class MainPageComponent implements OnInit {
   areasOfInterest: AreaOfInterest[];
-  lastHovered: number = -1;
   terminalStrings: string[] = [];
-  numberOfTerminalStrings: number = 5;
+  numberOfInputsInTermianl: number = 5;
+  numberOfTerminalStrings: number = this.numberOfInputsInTermianl * 2;
   next = 0;
   terminalInput: string = "";
   @ViewChild('terminalInputElement') terminalInputElement: ElementRef<HTMLInputElement>;
@@ -28,29 +28,43 @@ export class MainPageComponent implements OnInit {
 
 
   onMouseEntereAOI(idx: number){
-    if(this.lastHovered != idx)
-    {
-      this.terminalStrings[this.next] = ("> " + this.areasOfInterest[idx].description);
-      this.manageNewTerminalLine();
-      this.lastHovered = this.next - 1;
-    }
+      this.terminalProcessInput("get " + this.areasOfInterest[idx].title);
   }
 
   onEnterTerminalInput(){
-    this.terminalStrings[this.next] = ("> " + this.terminalInput);
-    this.manageNewTerminalLine();
+    this.terminalProcessInput(this.terminalInput);
     this.terminalInput = "";
   }
 
-  manageNewTerminalLine()
-  {
-    this.next++;
-    if(this.next >= this.numberOfTerminalStrings)
+  terminalProcessInput(input: string){
+    this.pushNewLine("> " + input);
+    this.pushNewLine(this.terminalGetRepsonse(input));
+  }
+
+  terminalGetRepsonse(input: string): string{
+    let areaOfInterestInput = this.areasOfInterest.find(aoi => "get " + aoi.title === input);
+    if(areaOfInterestInput != null)
+    {
+      return areaOfInterestInput.description;
+    }
+    return "echo " + input;
+  }
+
+  pushNewLine(line: string){
+    if(this.terminalStrings.length >= this.numberOfTerminalStrings)
     {
       this.next = this.numberOfTerminalStrings - 1;
+      //shift, but add an element to the end
+      this.terminalStrings.push(line);
       this.terminalStrings.shift();
     }
+    else
+    {
+      this.terminalStrings.push(line);
+      this.next++;
+    }
   }
+
   onTerminalClickInput() {
     const inputElement = this.terminalInputElement.nativeElement;
     inputElement.focus();
