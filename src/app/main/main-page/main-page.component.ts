@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import { AreasOfInterestService } from '../areas-of-interest/areas-of-interest.service';
-import { AreaOfInterest } from '../areas-of-interest/area-of-interest';
+import { AreasOfInterestService } from '../../data/areas-of-interest/areas-of-interest.service';
+import { AreaOfInterest } from '../../data/areas-of-interest/area-of-interest';
 import { TerminalComponent } from '../terminal/terminal.component';
 
 @Component({

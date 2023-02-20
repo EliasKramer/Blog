@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './main/main-page/main-page.component';
 import { AreaOfInterestListItemComponent } from './main/area-of-interest-list-item/area-of-interest-list-item.component';
-import { AreaOfInterestPageComponent } from './main/area-of-interest-page/area-of-interest-page.component';
+import { AreaOfInterestPageComponent } from './projects/area-of-interest-page/area-of-interest-page.component';
 import { BackgroundElementComponent } from './main/background-element/background-element.component';
 import { FormsModule } from '@angular/forms';
 import { TerminalComponent } from './main/terminal/terminal.component';
+import { ProjectCardComponent } from './projects/project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TerminalComponent } from './main/terminal/terminal.component';
     AreaOfInterestPageComponent,
     BackgroundElementComponent,
     TerminalComponent,
+    ProjectCardComponent,
   ],
   imports: [
     BrowserModule,

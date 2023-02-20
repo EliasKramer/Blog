@@ -1,0 +1,9 @@
+<h1 id="header">Projects of {{areaOfInterest.title}}</h1>
+
+<div id="project-container">   
+    <app-project-card 
+    *ngFor = "let val of areaOfInterest.projects"
+    [project] = "val"
+    >
+    </app-project-card>
+</div>

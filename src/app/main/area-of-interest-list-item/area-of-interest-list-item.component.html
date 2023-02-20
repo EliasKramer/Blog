@@ -1,4 +1,4 @@
-<a routerLink="{{areaOfInterest.routerLink}}">
+<a [routerLink] = "['/area-of-interest', areaOfInterest.routerLink]">
     <li>
         <h4>{{areaOfInterest.title}}</h4>
         <img src = {{areaOfInterest.imageUrl}} alt={{areaOfInterest.imageAlt}}>

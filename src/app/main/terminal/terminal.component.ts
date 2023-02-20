@@ -1,6 +1,6 @@
 import { Component, ViewChild, ElementRef} from '@angular/core';
-import { AreaOfInterest } from '../areas-of-interest/area-of-interest';
-import { AreasOfInterestService } from '../areas-of-interest/areas-of-interest.service';
+import { AreaOfInterest } from '../../data/areas-of-interest/area-of-interest';
+import { AreasOfInterestService } from '../../data/areas-of-interest/areas-of-interest.service';
 
 @Component({
   selector: 'app-terminal',

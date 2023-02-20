@@ -1,11 +1,4 @@
-#header {
-    background-color: rgb(56, 56, 56);
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    font-family: Arial;
-    border-radius: 10px;
-}
+@import "../../app.component.scss";
 
 #projects-container {
     background-color: rgba(0, 0, 0, 0.5);
