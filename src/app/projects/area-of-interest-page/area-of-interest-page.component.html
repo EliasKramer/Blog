@@ -2,8 +2,9 @@
 
 <div id="project-container">   
     <app-project-card 
-    *ngFor = "let val of areaOfInterest.projects"
+    *ngFor = "let val of areaOfInterest.projects; index as i"
     [project] = "val"
+    [idx] = "i"
     >
     </app-project-card>
 </div>

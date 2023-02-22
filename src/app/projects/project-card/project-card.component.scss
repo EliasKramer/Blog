@@ -1,6 +1,15 @@
 $card-main-color: rgb(234, 234, 234);
 $card-background-color: rgb(0, 0, 0);
 
+@keyframes card-fly-in {
+  0% {
+    transform: translateX(-1000%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 #card-div {
   background: radial-gradient(
     ellipse at center, 
@@ -18,7 +27,12 @@ $card-background-color: rgb(0, 0, 0);
   justify-content: space-between;
   position: relative;
   aspect-ratio: 9/16;
-  height: 300px; /* set a fixed height */
+  height: 400px;
+  animation: card-fly-in;
+  transform: translateX(-500%);
+  animation-duration: 2s;
+  //keep state after animation
+  animation-fill-mode: forwards;
 }
 
 #card-div > h1 {
@@ -47,4 +61,5 @@ $card-background-color: rgb(0, 0, 0);
   object-fit: contain;
   object-position: center;
   z-index: 1;
+  border-radius: 10px;
 }

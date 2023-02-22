@@ -4,7 +4,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-}
-#project-container > * {
-    flex-basis: calc(25% - 20px); /* adjust as needed */
+    //wrap around
+    justify-content: space-evenly;
 }
