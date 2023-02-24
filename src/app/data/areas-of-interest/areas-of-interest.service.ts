@@ -19,7 +19,7 @@ export class AreasOfInterestService {
           'This is a neural network that can recognize handwritten digits.',
           'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/MnistExamples.png/220px-MnistExamples.png',
           'Picture of handwritten digits - (should be replaced)',
-          '/digit-recognition'
+          'digit-recognition'
         )
       ]
     ),
