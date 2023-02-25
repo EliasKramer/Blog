@@ -32,25 +32,35 @@
     </p>
 
     <h2>Let's start at the very beginning: What is a Function</h2>
-    <h3>Maths</h3>
-    <p>A funciton is not more than some input, that gets processed and gives us some output.</p>
-    <p>In Maths you usually write it like that: f(x) = k * x + d</p>
-    <p>This takes a single number as an input and ouputs a single number as an output</p> 
-    <p>Where x is the input, k is the slope and d is the offset.</p>
-    <p>With this function we can display every slope in a cordinate system</p>
-    <!--make some pictures-->
-    <h3>Programming</h3>
-    <p>In java we can write a function like this:</p>
-    <p>float someFunction(float x) &#123; return x * 2 + 1; &#125;</p>
-    <h3>Neural Networks</h3>
-    <p>You can image a Neural Network like a big function 
-        that takes some input values and delivers a certain amount of output values</p>
-    <p>If we want to make a neural network, that can recognize digits from an image,
-        we need to have the same number of inputs as pixels in the image and one output value.</p>
-    <p>So if we have a 28x28 pixel image, we need 784 inputs and one output value.</p>
+    <div class="grouping">
+        <div class = "grouping">
+            <p>test</p>
+            <div class = "grouping">
+                <p>test</p>
+            </div>
+        </div>
+        <h3>Maths</h3>
+        <p>A funciton is not more than some input, that gets processed and gives us some output.</p>
+        <p>In Maths you usually write it like that:</p>
+        <p class="math">f(x) = k * x + d</p>
+        <p>This takes a single number as an input and ouputs a single number as an output</p> 
+        <p>Where x is the input, k is the slope and d is the offset.</p>
+        <p>With this function we can display every slope in a cordinate system</p>
+        <!--make some pictures-->
+    
+        <h3>Programming</h3>
+        <p>In java we can write a function like this:</p>
+        <p>float someFunction(float x) &#123; return x * 2 + 1; &#125;</p>
+        <h3>Neural Networks</h3>
+        <p>You can image a Neural Network like a big function 
+            that takes some input values and delivers a certain amount of output values</p>
+        <p>If we want to make a neural network, that can recognize digits from an image,
+            we need to have the same number of inputs as pixels in the image and one output value.</p>
+        <p>So if we have a 28x28 pixel image, we need 784 inputs and one output value.</p>
+    </div>
 
     <h2>Function Approximation</h2>
-    <a href="https://www.desmos.com/calculator">Plot functions in here</a>
+    <p>To plot my functions i used <a href="https://www.desmos.com/calculator">Desmos</a></p>
     <p>Now we have a function that takes some input and gives us some output.</p>
     <p>But what if we did't have the function? 
         Just some example points where the function goes through.</p>
@@ -58,6 +68,7 @@
     <p>Well, we can try to find the function that is closest to all the points.</p>
     <p>And this is what a Neural Network can do. But lets do it manually to understand the concept</p>
     <p>Lets pretend we have three points: A(1,4), B(0,1) and C(-1,-2)</p>
+    <img src="../../../../assets/images/nn_digit_recognition/initial_points.jpg" alt="three points on a plane">
     <p>We know that the function we seek is linear and every linear function can be described like that:</p>
     <p>f(x) = k * x + d</p>
     <p>So we can try to find the right values for k and d.</p>
