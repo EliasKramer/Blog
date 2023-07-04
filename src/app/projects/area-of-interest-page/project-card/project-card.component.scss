@@ -6,12 +6,6 @@ a {
 }
 
 #card-div {
-  background: radial-gradient(
-    ellipse at center, 
-    $card-background-color 0%, 
-    $card-background-color 50%, 
-    rgba($card-main-color, 0.1) 100%
-  );
   padding: 10px;
   border-radius: 10px;
   border: 5px solid $card-main-color;
@@ -24,23 +18,26 @@ a {
   aspect-ratio: 9/16;
   height: 400px;
   animation: card-fly-in;
-  transform: translateX(-500%);
   animation-duration: 2s;
   //keep state after animation
   animation-fill-mode: forwards;
+
+  scale: 0;
 }
 
 @keyframes card-fly-in {
   0% {
-    transform: translate(-1000%,-100%);
+    scale: 0;
+    transform: translate(-100%,-100%);
   }
   100% {
     transform: translate(0%, 0%);
+    scale: 1;
   }
 }
 
 #card-div:hover {
-  //box shadow on hover red - 
+  //box shadow on hover red -
   box-shadow: 0 5px 30px 0 gray;
   scale: 1.05;
 }

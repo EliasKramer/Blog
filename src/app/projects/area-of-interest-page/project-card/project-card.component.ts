@@ -14,6 +14,6 @@ export class ProjectCardComponent implements OnInit {
   delay: number;
 
   ngOnInit(): void {
-      this.delay = this.idx * 0.5;
+      this.delay = this.idx * 0.1;
   }
 }
