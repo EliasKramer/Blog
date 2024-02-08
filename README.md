@@ -1,3 +1,3 @@
 # This is my Blog Page
 
-This Project is still a Work in Progress. When find some time I'll finish it.
+This project is still a work in progress. When find some time I'll finish it.
